@@ -1,6 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base", ":gitSignOff"],
+  "description": "Only covers dependencies in non-standard locations that Dependabot cannot handle. Standard ecosystems are managed by Dependabot.",
+  "enabledManagers": ["regex"],
   "prConcurrentLimit": 5,
   "prHourlyLimit": 2,
   "customManagers": [
