@@ -92,7 +92,7 @@ mirror.gcr.io/jaegertracing/jaeger-agent:1.53.0
 mirror.gcr.io/jaegertracing/jaeger-collector:1.53.0
 mirror.gcr.io/jaegertracing/jaeger-query:1.53.0
 mirror.gcr.io/jaegertracing/jaeger-cassandra-schema:1.53.0
-mirror.gcr.io/library/cassandra:3.11.6
+mirror.gcr.io/library/cassandra:3.11.19
 
 # --- kyverno ---
 reg.kyverno.io/kyverno/kyverno:v1.17.1
