@@ -1,0 +1,40 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base", ":gitSignOff"],
+  "description": "Only covers dependencies in non-standard locations that Dependabot cannot handle. Standard ecosystems are managed by Dependabot.",
+  "enabledManagers": ["regex"],
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2,
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Container images in ECR manifest scripts",
+      "fileMatch": ["privateEcrManifest\\.sh$", "updateEcrManifest\\.sh$"],
+      "matchStrings": [
+        "(?<depName>(?:quay\\.io|cr\\.fluentbit\\.io|mirror\\.gcr\\.io|registry\\.k8s\\.io|public\\.ecr\\.aws|ghcr\\.io)/[a-z0-9._/-]+):(?<currentValue>[a-zA-Z0-9][a-zA-Z0-9._-]+)"
+      ],
+      "datasourceTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "description": "Docker images in Gradle build files",
+      "fileMatch": ["\\.gradle$"],
+      "matchStrings": [
+        "(?<depName>docker\\.io/[a-z0-9/_-]+):(?<currentValue>[a-zA-Z0-9][a-zA-Z0-9._-]+)"
+      ],
+      "datasourceTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "description": "Helm chart versions in ECR manifest",
+      "fileMatch": ["privateEcrManifest\\.sh$"],
+      "matchStrings": [
+        "(?<depName>[a-z0-9-]+)\\|(?<currentValue>[\\d.]+)\\|(?<registryUrl>https://[^\\s\"]+)"
+      ],
+      "datasourceTemplate": "helm"
+    }
+  ],
+  "registryAliases": {
+    "mirror.gcr.io": "docker.io"
+  }
+}
