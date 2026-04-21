@@ -85,7 +85,7 @@ ghcr.io/open-telemetry/opentelemetry-operator/opentelemetry-operator:0.122.0
 quay.io/brancz/kube-rbac-proxy:v0.18.1
 
 # --- grafana ---
-mirror.gcr.io/grafana/grafana:11.6.13
+mirror.gcr.io/grafana/grafana:11.6.14
 
 # --- jaeger ---
 mirror.gcr.io/jaegertracing/jaeger-agent:1.53.0
