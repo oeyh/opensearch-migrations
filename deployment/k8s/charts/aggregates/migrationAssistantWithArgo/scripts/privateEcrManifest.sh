@@ -34,7 +34,7 @@ IMAGES="
 # --- cert-manager ---
 quay.io/jetstack/cert-manager-controller:v1.17.2
 quay.io/jetstack/cert-manager-webhook:v1.17.2
-quay.io/jetstack/cert-manager-cainjector:v1.17.2
+quay.io/jetstack/cert-manager-cainjector:v1.20.2
 quay.io/jetstack/cert-manager-startupapicheck:v1.17.2
 
 # --- aws-privateca-issuer ---
