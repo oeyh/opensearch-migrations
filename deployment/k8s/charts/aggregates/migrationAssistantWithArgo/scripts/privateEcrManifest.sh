@@ -14,7 +14,7 @@
 CHARTS="
 cert-manager|1.17.2|https://charts.jetstack.io
 strimzi-kafka-operator|0.50.1|https://strimzi.io/charts/
-argo-workflows|1.0.5|https://argoproj.github.io/argo-helm
+argo-workflows|1.0.10|https://argoproj.github.io/argo-helm
 fluent-bit|0.51.0|https://fluent.github.io/helm-charts
 kube-prometheus-stack|72.0.0|https://prometheus-community.github.io/helm-charts
 etcd-operator|0.4.2|oci://ghcr.io/aenix-io/charts
