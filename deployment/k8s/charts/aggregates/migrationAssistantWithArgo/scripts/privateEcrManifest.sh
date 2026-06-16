@@ -58,7 +58,7 @@ quay.io/strimzi/buildah:0.50.1
 # Keep in sync with values.yaml charts.argo-workflows and
 # orchestrationSpecs/packages/argo-workflow-builders/tests/integ/infra/argoCluster.ts
 quay.io/argoproj/workflow-controller:v4.0.3
-quay.io/argoproj/argocli:v4.0.3
+quay.io/argoproj/argocli:v4.0.4
 quay.io/argoproj/argoexec:v4.0.3
 
 # --- fluent-bit ---
