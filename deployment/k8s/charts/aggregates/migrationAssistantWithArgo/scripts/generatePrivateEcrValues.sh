@@ -95,7 +95,7 @@ charts:
         admissionWebhooks:
           patch:
             image:
-              registry: "${M}/registry.k8s.io"
+              registry: "${M}/ghcr.io"
         prometheusConfigReloader:
           image:
             registry: "${M}/quay.io"
@@ -104,7 +104,7 @@ charts:
           image:
             registry: "${M}/quay.io"
           thanos:
-            image: "${M}/quay.io/thanos/thanos:v0.38.0"
+            image: "${M}/quay.io/thanos/thanos:v0.41.0"
       alertmanager:
         alertmanagerSpec:
           image:
@@ -124,7 +124,7 @@ charts:
       grafana:
         image:
           registry: "${ECR}"
-          repository: "mirrored/mirror.gcr.io/grafana/grafana"
+          repository: "mirrored/docker.io/grafana/grafana"
         sidecar:
           image:
             registry: "${M}/quay.io"
@@ -156,7 +156,7 @@ charts:
     values:
       image:
         registry: "${ECR}"
-        repository: "mirrored/mirror.gcr.io/grafana/grafana"
+        repository: "mirrored/docker.io/grafana/grafana"
       sidecar:
         image:
           registry: "${M}/quay.io"
